@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>canvas-nest.js</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -16,21 +19,7 @@
       height: 100%;
       width: 100%;
       background-color: #222;
-    }
-
-    #github-iframe {
-      position: fixed;
-      left: 32px;
-      top: 32px;
-    }
-
-    #area-render {
-      position: fixed;
-      width: 320px;
-      height: 160px;
-      right: 4px;
-      bottom: 4px;
-      border: dashed 1px #ccc;
+      font-family: 'Lato', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     #text {
@@ -46,25 +35,43 @@
       width: 100vw;
       z-index: 1;
       color: #fff;
-      text-transform: uppercase;
-      font-size: 8vmin;
+      font-size: 3vmin;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 4vmin;
     }
 
-    #text h1 {
-      opacity: 0.9
+    #text span {
+      color: #065D85;
+      transition: 1s;
+      margin: 0 .5rem;
+    }
+    #text span:hover {
+      color: #098CC4;
+      margin: 0 1.5rem;
     }
   </style>
 </head>
 
 <body>
   <div id="text">
-    <a href="mailto:contact@okoeng.com"><img src="assets/images/logo/logo.png"/></a>
+    <p><a href="mailto:contact@okoeng.com"><img src="assets/images/logo/logo.png" /></a></p>
+    <div>
+      <span>Hardware</span><span>Software</span><span>Embedded</span>
+    </div>
+    <div>
+      <span><a href="mailto:contact@okoeng.com">✉</a></span>
+      <span style="font-weight: bold;"><a href="tel:+40751481020">✆</a></span>
+    </div>
   </div>
-  <script type="text/javascript" color="255,255,255" pointColor="255,255,255" opacity='0.7' zIndex="0" count="300"
+  <script type="text/javascript" color="255,255,255" pointColor="255,255,255" opacity='1' zIndex="0" count="300"
     src="dist/canvas-nest.js"></script>
   <script type="text/javascript" src="dist/canvas-nest.umd.js"></script>
 </body>
