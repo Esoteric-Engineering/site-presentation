@@ -1,46 +1,126 @@
-Zombiz – Business Agency Responsive HTML5/CSS3 template
---------------------------------------------------------
-ZomBiz is an amazing html5 template for any corporate, finance or other business agencies. Our designers designed this with eye-catching backgrounds and fonts which will make your visitors love this eye-catchy user interface. This outstanding responsive template coded in bootstrap3 and CSS3 by our developer. This super responsive template offers fantastic animations, modern design with full customizability so you will get full control to change and update as you want.<br>
-<a href="https://www.themesine.com/downloads/zombiz-agency-html5-template/" target="_blank">Preview Link</a>
+# canvas-nest.js
 
-We would love to see how you use this amazing html5 template. You can notify us about your site by sending a mail to us. We will write a blog post to showcase the best examples.
+> A nest background of website draw on canvas. [中文 Readme 帮助文档](README-zh.md).
 
-Preview
---------
-![free agency bootstrap html template](https://cdn.dribbble.com/users/1351310/screenshots/3475869/zombiz_dribbble_shot_6.jpg)
+[![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas-nest.js)
+[![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
+[![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
+[![gzip](http://img.badgesize.io/https://unpkg.com/canvas-nest.js/dist/canvas-nest.js?compression=gzip)](https://unpkg.com/canvas-nest.js/dist/canvas-nest.js)
 
-Demo site
----------
-<a href="http://demo.themesine.com/zombiz/" rel="nofollow" target="_blank">Demo</a>
+![screenshot](/screenshot.png)
 
-Template Info:
------------------------
-Name: 		ZomBiz - Free Bootstrap HTML5 Template <br>
-Version: 	1.0 <br>
-Author: 	ThemeSINE <br>
-Twitter:	https://twitter.com/themesine <br>
-Website: 	https://www.themesine.com/ <br>
+## Feature
 
-Author
--------
-<a href="https://www.themesine.com" target="_blank">Themesine</a>
+ - It does not depend on jQuery and original javascrpit is used.
+ - Small size, only 2 Kb.
+ - Easy to implement, simple configuration.
+ - You do not have to be a web developer to use it.
+ - Modularized with area rendering.
 
-Credits
------------------------
-- Twitter Bootstrap http://getbootstrap.com
-- jQuery http://jquery.org
-- Owl Carousel https://owlcarousel2.github.io/OwlCarousel2/
-- Font Awesome http://fontawesome.io
-- jQuery slimScroll http://rocha.la/jQuery-slimScroll
-- Linearicons https://linearicons.com/
-- Pexels https://www.pexels.com/
-- Unsplash https://unsplash.com/
 
-Other templates
----------------
-<a href="https://www.themesine.com/downloads/dashloon-bootstrap-admin-dashboard/" target="_blank"> DashLoon Bootstrap Admin template</a><br>
-<a href="https://www.themesine.com/downloads/tournest-tours-travel-agency-html5-template/" target="_blank"> TourNest Travel Agency template </a>
+## Install
+```sh
+# use npm
+npm install --save canvas-nest.js
 
-License
---------
-Copyright (c) 2018 ThemeSINE. <a href="https://www.themesine.com/license/"> Read the License </a>
+# or use yarn
+yarn add canvas-nest.js
+```
+
+
+## Usage
+
+ - Script tag
+
+Insert the code below `between <body> and </body>`.
+
+```html
+<script src="dist/canvas-nest.js"></script>
+```
+
+Strongly suggest to insert before the tag `</body>`, as the following:
+
+```html
+<html>
+<head>
+	...
+</head>
+<body>
+	...
+	...
+	<script src="dist/canvas-nest.js"></script>
+</body>
+</html>
+```
+
+Then ok! `Please do not add the code in the <head> </head>`.
+
+
+ - Modular usage (Area render)
+
+After installation, you can import this as module.
+
+There is only one API, use it as below:
+
+```js
+import CanvasNest from 'canvas-nest.js';
+
+const config = {
+  color: '255,0,0',
+  count: 88,
+};
+
+// Using config rendering effect at 'element'.
+const cn = new CanvasNest(element, config);
+
+// destroy
+cn.destroy();
+```
+
+
+## Configuration
+
+ - **`color`**: color of lines, default: `'0,0,0'`; RGB values: (R,G,B).(note: use ',' to separate.)
+ - **`pointColor`**: color of points, default: `'0,0,0'`; RGB values: (R,G,B).(note: use ',' to separate.)
+ - **`opacity`**: the opacity of line (0~1), default: `0.5`.
+ - **`count`**: the number of lines, default: `99`.
+ - **`zIndex`**: z-index property of the background, default: `-1`.
+
+Example:
+
+ - Script tag
+
+```html
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="dist/canvas-nest.js"></script>
+```
+
+ - Modular usage (Area render)
+
+```js
+{
+  color: '0,0,255',
+  opacity: 0.7,
+  zIndex: -2,
+  count: 99,
+};
+```
+
+**Note: If the Configuration isn't customized, default values are available as well.**
+
+
+## Related projects
+
+ - [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp): a wordpress plugin, search `canvas-nest` in wordpress store.
+ - [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest): vue component wrapper.
+ - [react-canvas-nest](https://github.com/flyerH/react-canvas-nest): react component wrapper.
+ - [canvas-nest-for-vscode](https://github.com/AShujiao/vscode-nest): a vscode extensions, search `nest` in vscode extensions.
+
+## Used by
+
+ - [A Tool](https://atool.vip): a convenient tool box.
+
+
+
+## License
+
+MIT@[hustcc](https://github.com/hustcc).
